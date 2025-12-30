@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AlmostBIOS Setup Utility</title>
+  <link rel="stylesheet" href="assets/bios.css" />
+</head>
+<body>
+  <div id="frame" role="application" aria-label="AlmostBIOS Setup Utility">
+    <div id="topbar">
+      <div id="title">AlmostBIOS Setup Utility</div>
+      <div id="ver">Legacy Mode / v1.0</div>
+    </div>
+
+    <div id="menubar" aria-label="Tabs"></div>
+
+    <div id="content">
+      <div id="main">
+        <div class="sectionTitle">Settings</div>
+        <table class="table" aria-label="Settings table">
+          <tbody id="mainTable"></tbody>
+        </table>
+      </div>
+      <div id="side">
+        <div class="sectionTitle" id="sideTitle">Help</div>
+        <div id="sideBody" class="note"></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div id="legend">
+        <span>↑↓: Select</span>
+        <span>←→: Tab</span>
+        <span>Enter: Change</span>
+        <span>Esc: Exit</span>
+        <span>F10: Save & Exit</span>
+      </div>
+      <div id="footerMsg">Enterで操作 / F10で保存して起動</div>
+    </div>
+  </div>
+
+  <div id="modal" aria-hidden="true">
+    <div class="box" role="dialog" aria-modal="true" aria-label="Confirm">
+      <h3 id="modalTitle">Confirm</h3>
+      <div id="modalBody">—</div>
+      <div class="btnRow">
+        <button id="btnNo" type="button">No</button>
+        <button id="btnYes" type="button">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/bios.js" defer></script>
+</body>
+</html>

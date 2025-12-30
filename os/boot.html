@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AlmostOS - Boot</title>
+  <link rel="stylesheet" href="assets/base.css" />
+  <link rel="stylesheet" href="assets/boot.css" />
+</head>
+<body>
+  <div id="bg"></div>
+
+  <div id="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <h1 id="title">ALMOST Firmware Boot</h1>
+            <div class="sub" id="sub">Press F2 or click BIOS to enter Setup</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="biosBtn" type="button">ENTER BIOS (F2)</button>
+          <button class="btn" id="skipBtn" type="button" title="Ctrl/⌘+EnterでもOK">Skip</button>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="row">
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="bar" id="bar"></div>
+          </div>
+          <div class="pct" id="pct">  0%</div>
+        </div>
+        <div class="log" id="log" aria-label="Boot log"></div>
+      </div>
+
+      <div class="footer">
+        <div class="hint">
+          <span>Setup:</span> <kbd>F2</kbd> / <kbd>Del</kbd>
+          <span style="margin-left:10px">Quick boot:</span> <kbd>Ctrl</kbd>+<kbd>Enter</kbd>
+        </div>
+        <div class="hint">AlmostOS Multi-file Pack</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/boot.js" defer></script>
+</body>
+</html>
