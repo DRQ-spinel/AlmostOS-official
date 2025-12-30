@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b62ff" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>AlmostOS Official</title>
+  <meta name="description" content="AlmostOS（ブラウザで遊べる“OSっぽいUI”）の公式ページ。起動方法、機能、ショートカット、BSODのStop Codeなど。" />
+
+  <meta property="og:title" content="AlmostOS Official" />
+  <meta property="og:description" content="ブラウザで遊べる“OSっぽいUI”。デスクトップ/ウィンドウ/ターミナル/タスクマネージャ/BSOD…ぜんぶ雰囲気で再現。" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <header class="topbar" id="top">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="#top" aria-label="AlmostOS Official">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span class="brand__text">AlmostOS</span>
+      </a>
+
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#play">起動</a>
+        <a href="#about">概要</a>
+        <a href="#features">機能</a>
+        <a href="#apps">アプリ</a>
+        <a href="#stopcodes">Stop Code</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="メニュー" aria-controls="mobileNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="#play">起動</a>
+      <a href="#about">概要</a>
+      <a href="#features">機能</a>
+      <a href="#apps">アプリ</a>
+      <a href="#stopcodes">Stop Code</a>
+      <a href="#faq">FAQ</a>
+      <a href="#links">リンク</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div>
+          <p class="badge">ブラウザで遊べる “OSっぽいUI”</p>
+          <h1>AlmostOS</h1>
+          <p class="lead">
+            デスクトップ、ウィンドウ、スタートメニュー、ターミナル、タスクマネージャ……
+            <br/>
+            <strong>それっぽさ</strong>に全振りした、Web上のパロディOSです。
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn primary" href="os/boot.html" target="_blank" rel="noopener">今すぐ起動（Demo）</a>
+            <a class="btn ghost" href="#howto">起動方法を見る</a>
+            <a class="btn ghost" href="#stopcodes">Stop Code</a>
+          </div>
+
+          <div class="statrow" aria-label="要点">
+            <div class="stat">
+              <div class="stat__k">動作</div>
+              <div class="stat__v">ブラウザだけ</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">保存</div>
+              <div class="stat__v">localStorage</div>
+            </div>
+            <div class="stat">
+              <div class="stat__k">内容</div>
+              <div class="stat__v">アプリ/ゲーム内蔵</div>
+            </div>
+          </div>
+
+          <div class="notice">
+            <strong>注意：</strong>
+            AlmostOSは<strong>本物のOSではありません</strong>。PCを壊す操作はできません（怖そうな演出はします）。
+          </div>
+        </div>
+
+        <div class="hero__card" aria-label="プレビューカード">
+          <div class="preview">
+            <div class="preview__top">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+              <div class="preview__title">almostos://desktop</div>
+              <a class="preview__pill" href="os/boot.html" target="_blank" rel="noopener">▶ 起動</a>
+            </div>
+            <div class="preview__body">
+              <div class="miniwin">
+                <div class="miniwin__bar">Terminal</div>
+                <div class="miniwin__content">
+                  <div class="mono">$ help</div>
+                  <div class="mono dim">apps / games / system / fun</div>
+                  <div class="mono">$ taskmgr</div>
+                  <div class="mono dim">CPU 42% / メモリ 69%</div>
+                  <div class="mono">$ rm -rf /*</div>
+                  <div class="mono warn">AlmostGuard™: それは無理</div>
+                </div>
+              </div>
+              <div class="tipbox">
+                <div class="tipbox__title">Tips</div>
+                <div class="tipbox__body">システムプロセス停止 → BSOD（演出）</div>
+              </div>
+
+              <div class="chips" aria-label="ショートカット">
+                <span class="chip"><kbd>Ctrl</kbd>+<kbd>Space</kbd> Start</span>
+                <span class="chip"><kbd>Ctrl</kbd>+<kbd>`</kbd> Terminal</span>
+                <span class="chip"><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Esc</kbd> TaskMgr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__fade"></div>
+    </section>
+
+    <section class="section" id="play">
+      <div class="wrap">
+        <div class="sectionHead">
+          <h2>まずは起動してみる</h2>
+          <div class="tools">
+            <a class="btn small primary" href="os/boot.html" target="_blank" rel="noopener">Demoを開く</a>
+            <a class="btn small" href="#links">ダウンロード/配布</a>
+          </div>
+        </div>
+
+        <div class="grid3">
+          <a class="card iconCard" href="os/boot.html" target="_blank" rel="noopener">
+            <div class="iconCard__icon">⟡</div>
+            <h3>Boot</h3>
+            <p class="dim">起動演出。<kbd>F2</kbd> / <kbd>Del</kbd>でBIOSへ。</p>
+            <div class="iconCard__cta">開く →</div>
+          </a>
+          <a class="card iconCard" href="os/bios.html" target="_blank" rel="noopener">
+            <div class="iconCard__icon">⌁</div>
+            <h3>BIOS</h3>
+            <p class="dim">レガシー風。<kbd>F10</kbd>でSave &amp; Exit。</p>
+            <div class="iconCard__cta">開く →</div>
+          </a>
+          <a class="card iconCard" href="os/os.html" target="_blank" rel="noopener">
+            <div class="iconCard__icon">🖥️</div>
+            <h3>Desktop</h3>
+            <p class="dim">本体。ウィンドウ/スタート/タスクバー。</p>
+            <div class="iconCard__cta">開く →</div>
+          </a>
+        </div>
+
+        <div class="callout subtle">
+          <div class="callout__title">推奨</div>
+          <p class="callout__body">
+            Chrome / Edgeあたりが安定です。スマホでも動きますが、キーボードショートカットはPCが楽。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <h2>概要</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>これは何？</h3>
+            <p>
+              AlmostOSは、ブラウザ上で「OSっぽい体験」を再現するUIプロジェクト。
+              ドラッグできるウィンドウ、スタートメニュー、ターミナル、タスクマネージャなどを雰囲気重視で作ってます。
+            </p>
+            <div class="pillrow">
+              <span class="pill">Desktop</span>
+              <span class="pill">Windows</span>
+              <span class="pill">Terminal</span>
+              <span class="pill">TaskMgr</span>
+              <span class="pill">BSOD</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>安全・プライバシー</h3>
+            <ul>
+              <li>基本はローカルで完結（設定/配置はlocalStorageに保存）</li>
+              <li>勝手にファイルを読んだり削除したりはしません</li>
+              <li><strong>内蔵Browser</strong>は外部サイトをiframeで開くので、通信が発生します</li>
+            </ul>
+            <p class="dim">※「怖そうに見える演出」はあります（BSODなど）。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="howto">
+      <div class="wrap">
+        <h2>起動・操作ガイド</h2>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>起動フロー</h3>
+            <ol class="list">
+              <li><a class="inline" href="os/boot.html" target="_blank" rel="noopener">boot.html</a> を開く</li>
+              <li>必要なら <kbd>F2</kbd>/<kbd>Del</kbd> でBIOSへ</li>
+              <li><kbd>F10</kbd> Save&amp;Exit → 自動でOSへ</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>基本操作</h3>
+            <ul>
+              <li>タスクバーのアイコン → 起動/切替</li>
+              <li>ウィンドウの× → 終了</li>
+              <li>右クリック → コンテキストメニュー</li>
+              <li>ダブルクリック → 最大化（対応ウィンドウ）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>ショートカット</h3>
+            <ul>
+              <li><kbd>Ctrl</kbd> + <kbd>Space</kbd>：Start</li>
+              <li><kbd>Ctrl</kbd> + <kbd>`</kbd>：Terminal</li>
+              <li><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>：Task Manager</li>
+              <li><kbd>Ctrl</kbd> + <kbd>L</kbd>：Lock</li>
+            </ul>
+            <p class="dim">Terminalは <kbd>↑</kbd>/<kbd>↓</kbd>で履歴、<kbd>Tab</kbd>で補完。</p>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__title">タスクマネージャの仕様</div>
+          <p class="callout__body">
+            アプリプロセスは停止できます。<br/>
+            <strong>システムプロセスを止めると即BSOD</strong>（演出）です。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <h2>機能</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>UI / 体験</h3>
+            <ul>
+              <li>デスクトップ / スタートメニュー / タスクバー</li>
+              <li>ウィンドウ操作（ドラッグ、前面化、リサイズ、最大化）</li>
+              <li>右クリックメニュー、クイックパネル（設定トグル）</li>
+              <li>アイコン配置を保存（ドラッグ、複数選択、整列、スナップ）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>システムっぽい機能</h3>
+            <ul>
+              <li>Terminal（コマンド、履歴、補完）</li>
+              <li>Task Manager（プロセス停止・簡易グラフ）</li>
+              <li>Lock Screen（PIN設定はlocalStorage）</li>
+              <li>HTML書き出し（状態入りも可）</li>
+              <li>BSOD（Stop Code表示＆再起動演出）</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card subtle" style="margin-top:14px">
+          <h3>「入ってないもの」</h3>
+          <div class="grid2" style="margin-top:10px">
+            <ul class="dim" style="margin:0; padding-left:18px">
+              <li>本当のOS機能（ドライバ、権限、実ディスク操作）</li>
+              <li>勝手なファイル破壊</li>
+            </ul>
+            <ul class="dim" style="margin:0; padding-left:18px">
+              <li>あなたのPCへの直接アクセス</li>
+              <li>危険な挙動（マルウェア的なやつ）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <div class="wrap">
+        <h2>内蔵アプリ / ゲーム</h2>
+        <div class="grid3">
+          <div class="card">
+            <h3>ユーティリティ</h3>
+            <ul>
+              <li>🧮 Calculator（四則演算）</li>
+              <li>⏱️ Clock（Timer / Stopwatch）</li>
+              <li>🔁 Converter（単位変換）</li>
+              <li>🗓️ Calendar（月表示）</li>
+              <li>🔐 Password（パスワード生成）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>ゲーム</h3>
+            <ul>
+              <li>🟧 2048（矢印 / WASD / スワイプ）</li>
+              <li>💣 Mines（左=開く / 右=旗）</li>
+              <li>🐍 Snake（矢印 / WASD / 画面ボタン）</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>その他</h3>
+            <ul>
+              <li>📝 Notes（メモ）</li>
+              <li>🧩 App Center（アプリ一覧）</li>
+              <li>🌐 Browser（iframe / 外部タブ）</li>
+            </ul>
+            <p class="dim">Browserはサイトによって表示できないことがあります（X-Frame-Options等）。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="stopcodes">
+      <div class="wrap">
+        <div class="sectionHead">
+          <h2>Stop Code（雰囲気説明）</h2>
+          <div class="tools">
+            <input id="stopcodeSearch" class="input" placeholder="検索：CRITICAL / IRQL / MEMORY ..."/>
+            <button id="randomStop" class="btn small">ランダム</button>
+            <button id="resetStop" class="btn small ghost">一覧に戻す</button>
+          </div>
+        </div>
+
+        <div class="stopHelp dim">
+          クリックでコピーできます。説明は<strong>雰囲気</strong>なので、深追いはしないでね。
+        </div>
+
+        <div id="stopcodeList" class="stopgrid" aria-live="polite"></div>
+
+        <div class="card subtle" style="margin-top:14px">
+          <h3>AlmostOS特有のやつ</h3>
+          <p class="dim">
+            タスクマネージャから<strong>システムプロセス</strong>を停止 → 即BSOD（演出）。
+            「押しちゃダメ」を押すための装置です。
+          </p>
+          <div class="pillrow">
+            <span class="pill">kernelish.exe</span>
+            <span class="pill">sessionhost.exe</span>
+            <span class="pill">taskbarhost.exe</span>
+            <span class="pill">almostinit.exe</span>
+            <span class="pill">windowdwm.exe</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="wrap">
+        <h2>FAQ</h2>
+        <div class="accordion">
+          <details class="acc">
+            <summary>壊れませんか？</summary>
+            <p>壊れません。ブラウザ上のUIで、危険な操作は無効化しています。</p>
+          </details>
+          <details class="acc">
+            <summary>BSODが出たんだけど大丈夫？</summary>
+            <p>大丈夫。演出です。数秒で「再起動」して戻ります。</p>
+          </details>
+          <details class="acc">
+            <summary>保存はどこに入りますか？</summary>
+            <p>基本はlocalStorageです（端末/ブラウザごと）。HTML書き出しもできます。</p>
+          </details>
+          <details class="acc">
+            <summary>Browserは何をしてる？</summary>
+            <p>iframeで外部サイトを表示します。表示できないサイトは「外部」ボタンで新規タブへ。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="links">
+      <div class="wrap">
+        <h2>リンク</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>AlmostOS（Demo）</h3>
+            <p class="dim">このサイト内のデモ（別タブで開きます）。</p>
+            <a class="btn primary" href="os/boot.html" target="_blank" rel="noopener">Launch Demo</a>
+          </div>
+          <div class="card">
+            <h3>配布 / リポジトリ</h3>
+            <p class="dim">ダウンロードや更新情報はこちら（URLは必要に応じて変更）。</p>
+            <div class="btnRow">
+              <a class="btn ghost" href="https://mega.nz/file/82YFFCSC#vaLrNSK3vDVzigVRisaisLfJ7BKFIpliBGtLYEIVkdg" target="_blank" rel="noopener">Download</a>
+              <a class="btn ghost" href="https://github.com/DRQ-spinel/AlmostOS-official" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>
+        <div class="footer__brand">AlmostOS</div>
+        <div class="dim">This site is a parody UI project. Not affiliated with Microsoft.</div>
+      </div>
+      <div class="dim">© 2025 AlmostOS</div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STOPCODES__ = [
+      {"code":"CRITICAL_PROCESS_DIED","desc":"大事そうなプロセスが落ちた（っぽい）。","when":"システム系プロセスを止めた/落ちた時の演出。","tip":"タスクマネージャで『それっぽい名前』を止めない。"},
+      {"code":"IRQL_NOT_LESS_OR_EQUAL","desc":"順番とかレベルとか、そういうのを守らなかった。","when":"カーネルが『それ今やる？』ってなった時の雰囲気。","tip":"再起動して落ち着こう（雰囲気）。"},
+      {"code":"PAGE_FAULT_IN_NONPAGED_AREA","desc":"そこにあるはずのメモリが無い。どこいった。","when":"重い処理/バグっぽい時の演出。","tip":"タブ閉じる、または“やり直す”。"},
+      {"code":"SYSTEM_SERVICE_EXCEPTION","desc":"システムサービスが例外を投げた。","when":"アプリ/システムの境目でコケた感じ。","tip":"最近触った設定を戻す（気持ち）。"},
+      {"code":"KMODE_EXCEPTION_NOT_HANDLED","desc":"カーネル例外が未処理のまま着地した。","when":"つまりバグ（雰囲気）。","tip":"再起動。だいたいそれで直る（気持ち）。"},
+      {"code":"DPC_WATCHDOG_VIOLATION","desc":"監視犬が『遅い！』って吠えた。","when":"処理が詰まって固まりかけた演出。","tip":"重いアプリを閉じる/落ち着く。"},
+      {"code":"DRIVER_IRQL_NOT_LESS_OR_EQUAL","desc":"ドライバくんがやらかした。","when":"“ドライバ”という単語を出すと急にそれっぽい。","tip":"ここはWebなので深追い禁止。"},
+      {"code":"BAD_SYSTEM_CONFIG_INFO","desc":"設定が怪しい。だいぶ怪しい。","when":"内部状態がズレた時の演出。","tip":"保存/読み込みをやり直す。"},
+      {"code":"MEMORY_MANAGEMENT","desc":"メモリ管理が崩壊した。","when":"いろいろ開きすぎ/重すぎの演出。","tip":"タブを整理。"},
+      {"code":"VIDEO_TDR_FAILURE","desc":"画面まわりが固まって戻れなかった。","when":"描画が重い時のそれっぽい演出。","tip":"ブラウザ再読み込み。"},
+      {"code":"UNEXPECTED_KERNEL_MODE_TRAP","desc":"予想外の罠に落ちた。","when":"想定外の入力/バグを踏んだ感。","tip":"同じ操作を連打しない。"},
+      {"code":"CLOCK_WATCHDOG_TIMEOUT","desc":"CPUの時計係が帰ってこない。","when":"高負荷で待たされる雰囲気。","tip":"端末が熱い時は休ませる。"},
+      {"code":"KERNEL_SECURITY_CHECK_FAILURE","desc":"セキュリティチェックに落ちた。アウト。","when":"怪しい状態になった時の演出。","tip":"変な“拡張”は入れない（本当）。"},
+      {"code":"WHEA_UNCORRECTABLE_ERROR","desc":"ハードウェアが『無理』って言った。","when":"無理なことした気分になるための演出。","tip":"深呼吸して別のことをする。"},
+      {"code":"INACCESSIBLE_BOOT_DEVICE","desc":"起動ディスクに辿り着けない。","when":"ブート演出でそれっぽく出したい時。","tip":"boot.htmlを開き直す。"}
+    ];
+  </script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

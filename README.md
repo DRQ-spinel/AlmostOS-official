@@ -1,14 +1,14 @@
 # AlmostOS Official Static Site
 
-これは `https://almostos-official.onrender.com` に置く想定の静的サイトです。
-配布ファイル自体は別サイトで行う前提なので、`index.html` の「リンク」セクションのボタンにURLを入れてください。
+このフォルダは `AlmostOS Official`（案内サイト）です。
 
-## 中身
-- index.html
-- assets/styles.css
-- assets/app.js
-- _headers (任意: セキュリティヘッダ)
+- `index.html` … 公式っぽいトップページ
+- `os/` … AlmostOS のデモ（boot/bios/os/bsod を丸ごと同梱）
 
-## デプロイ（例）
-- Render / Netlify / GitHub Pages など
-- ルートをこのフォルダにして静的ホスティングするだけ
+## 使い方
+- 静的ホスティング（Render / Netlify / GitHub Pages など）にそのまま置けばOK
+- `index.html` の「リンク」セクションは、配布先URLに合わせて編集してください
+
+## セキュリティヘッダ
+- `_headers` は任意（Netlify系の設定）です
+
