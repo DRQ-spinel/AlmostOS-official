@@ -1,0 +1,101 @@
+body{margin:0;background:#001a9e;color:#e8f0ff}
+#frame{
+  width:min(1024px, 96vw);
+  margin: 26px auto;
+  border: 3px solid #cfd7ff;
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+  background:#001a9e;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Noto Sans Mono", monospace;
+  letter-spacing:.01em;
+}
+#topbar{
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  border-bottom: 2px solid #cfd7ff;
+}
+#title{font-weight:700}
+#ver{opacity:.9}
+#menubar{
+  display:flex;gap:10px;flex-wrap:wrap;
+  padding:8px 10px;
+  border-bottom: 2px solid #cfd7ff;
+}
+.tab{
+  padding:2px 8px;
+  border: 1px solid transparent;
+  cursor:default;
+}
+.tab.active{
+  background:#cfd7ff;
+  color:#001a9e;
+  border-color:#cfd7ff;
+}
+#content{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:0;
+  min-height: 420px;
+}
+#main{
+  padding:10px 12px;
+  border-right: 2px solid #cfd7ff;
+}
+#side{
+  padding:10px 12px;
+}
+.sectionTitle{
+  display:inline-block;
+  padding:1px 6px;
+  background:#cfd7ff;
+  color:#001a9e;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.table tr{height:26px}
+.table td{padding:0 6px;vertical-align:middle}
+.table tr.sel td{
+  background:#cfd7ff;
+  color:#001a9e;
+}
+.kv{display:flex;justify-content:space-between;gap:12px;font-size:13px;opacity:.95}
+.small{font-size:12px;opacity:.9}
+hr{border:none;border-top:2px solid #cfd7ff;margin:10px 0}
+#footer{
+  border-top: 2px solid #cfd7ff;
+  padding:8px 10px;
+  display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  font-size:12px;
+}
+#legend span{margin-right:12px}
+#modal{
+  position:fixed;inset:0;
+  display:none;
+  align-items:center;justify-content:center;
+  background: rgba(0,0,0,.35);
+}
+#modal .box{
+  width:min(520px, 92vw);
+  background:#cfd7ff;
+  color:#001a9e;
+  border: 3px solid #fff;
+  padding:12px 12px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.6);
+}
+#modal .box h3{margin:0 0 6px;font-size:14px}
+#modal .btnRow{display:flex;justify-content:flex-end;gap:10px;margin-top:10px}
+#modal button{
+  font:inherit;
+  border:2px solid #001a9e;
+  background:#fff;
+  padding:4px 10px;
+}
+#modal button:focus{outline:2px solid #001a9e}
+.note{opacity:.9}

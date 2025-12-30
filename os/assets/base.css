@@ -1,0 +1,31 @@
+:root{
+  --bg0:#0b0f17;
+  --bg1:#111a2e;
+  --fg:#e9efff;
+  --muted:rgba(233,239,255,.65);
+  --glass:rgba(255,255,255,.08);
+  --glass2:rgba(255,255,255,.12);
+  --stroke:rgba(255,255,255,.16);
+  --shadow:0 18px 60px rgba(0,0,0,.55);
+  --r:20px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  color:var(--fg);
+  background:
+    radial-gradient(1400px 800px at 18% 20%, rgba(99,102,241,.18), transparent 55%),
+    radial-gradient(1200px 900px at 85% 30%, rgba(34,211,238,.14), transparent 60%),
+    radial-gradient(900px 650px at 50% 85%, rgba(168,85,247,.12), transparent 60%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{color:inherit}
+button,input,select{font:inherit}
+::selection{background:rgba(99,102,241,.35)}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
